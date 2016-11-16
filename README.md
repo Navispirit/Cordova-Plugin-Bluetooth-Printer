@@ -2,7 +2,8 @@
 A cordova plugin for bluetooth printer for android platform, which support text, image and POS printing.
 
 ##Support
-- Text
+- Print Text (Eng)
+- Print cyrillic text
 - POS Commands
 - Image Printing 
 
@@ -59,7 +60,7 @@ BTPrinter.disconnect(function(data){
 Print cyrillic text
 
 ```
-BTPrinter.printCyrrilic(function(data){
+BTPrinter.printCyrillic(function(data){
     console.log("Success");
     console.log(data);
 },function(err){
@@ -69,7 +70,7 @@ BTPrinter.printCyrrilic(function(data){
 ```
 
 
-Print simple string
+Print text
 
 ```
 BTPrinter.printText(function(data){
