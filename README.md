@@ -56,16 +56,16 @@ BTPrinter.disconnect(function(data){
 ```
 
 
-Disconnect printer
+Print cyrillic text
 
 ```
-BTPrinter.disconnect(function(data){
-	console.log("Success");
-	console.log(data)
+BTPrinter.printCyrrilic(function(data){
+    console.log("Success");
+    console.log(data);
 },function(err){
-	console.log("Error");
-	console.log(err)
-})
+    console.log("Error");
+    console.log(err);
+}, "String to Print")
 ```
 
 

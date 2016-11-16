@@ -5,11 +5,11 @@
         version="0.0.1-dev">
 
    <name>BluetoothPrinter</name>
-   <description>A cordova plugin for bluetooth printer for android platform, which support text printing and POS printing.</description>
+   <description>A cordova plugin for bluetooth printer for android platform, which support text printing cyrillic and POS printing.</description>
 
-   <repo>https://github.com/srehanuddin/Cordova-Plugin-Bluetooth-Printer</repo>
+   <repo>https://github.com/Navispirit/Cordova-Plugin-Bluetooth-Printer</repo>
    <license>Apache 2.0</license>
-   <keywords>cordova, bluetooth, printer, pos, text, barcode, image</keywords>
+   <keywords>cordova, bluetooth, printer, pos, text, thermal print cyrillic, image</keywords>
 
    <author>Syed Rehanuddin</author>
 

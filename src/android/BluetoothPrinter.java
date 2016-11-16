@@ -352,6 +352,34 @@ public static class PrinterCommands {
 		return false;
 	}
 
+		boolean printCyrillic(CallbackContext callbackContext, String msg) throws IOException {
+		try {
+
+			mmOutputStream.write(PrinterCommands.INIT);
+		
+			mmOutputStream.write(new byte[] { 0x1B, 0x74, 9 });
+			
+			mmOutputStream.write(msg.getBytes("cp866"));
+			
+			
+			//mmOutputStream.write(getText(msg));
+			
+			mmOutputStream.write(PrinterCommands.FEED_LINE);
+			
+			// tell the user data were sent
+			//Log.d(LOG_TAG, "Data Sent");
+			callbackContext.success("Data Sent:"+msg);
+			return true;
+
+		} catch (Exception e) {
+			String errMsg = e.getMessage();
+			Log.e(LOG_TAG, errMsg);
+			e.printStackTrace();
+			callbackContext.error(errMsg);
+		}
+		return false;
+	}
+
 	//This will send data to bluetooth printer
     boolean print(CallbackContext callbackContext, String msg) throws IOException {
         try {
